@@ -22,6 +22,8 @@ pip3 install -r requirements.txt
 # Usage
 ```
 python3 reddit-post-scraping-tool.py --keyword [keyword] --subreddit [subreddit name (without 'r/')]
+
+Example: python3 reddit-post-scraping-tool.py --subreddit popular --limit 20
 ```
 
 ## Optional arguments
