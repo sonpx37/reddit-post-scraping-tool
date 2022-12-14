@@ -56,15 +56,15 @@ class RedditPostScraper:
                      } 
                      
                      
-        post_tree = Tree("\n" + post['data']['title'])
+        post_tree = Tree("\n Content::" + post['data']['title'])
         for post_key, post_value in post_data.items():
             post_tree.add(f"{post_key}: {post_value}")
         xprint(post_tree)
-        print(post['data']['selftext']+"\n")
+        # print(post['data']['selftext']+"\n")
         
 
 # Parsing command line arguments                    
-parser = argparse.ArgumentParser(description=f'reddit-post-scraping-tool — by Son Pham | https://about.me/rly0nheart', epilog=f'Given a subreddit name and a keyword, this script will return all top (by default) posts that contain the specified word.')
+parser = argparse.ArgumentParser(description=f'reddit-post-scraping-tool — by Kenny Pham | https://t.me/kpham', epilog=f'Given a subreddit name and a keyword, this script will return all top (by default) posts that contain the specified word.')
 # parser.add_argument('-k','--keyword',help='kewyword', required = True)
 parser.add_argument('-s','--subreddit',help='subreddit', required = True)
 parser.add_argument('-c','--limit',help='results limit (1-100) (default: %(default)s)', default=10, type=int)
